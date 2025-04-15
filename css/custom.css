@@ -17,5 +17,103 @@
 footer {
     background-image: url("../images/bg-footer.jpg")
 }
+#hero {
+    margin-top: 0 !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+
+  /* Lock Screen Styles */
+
+#lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.lock-container {
+    text-align: center;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    background: white;
+    width: 90%;
+    max-width: 360px;
+    transition: all 0.3s ease;
+}
+
+.lock-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+#access-code {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+#access-code:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+#access-code::placeholder {
+    color: #a0aec0;
+    font-weight: 300;
+}
+
+button {
+    padding: 0.75rem 1.75rem;
+    border: none;
+    background: #4299e1;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+button:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+}
+
+#error-msg {
+    color: #e53e3e;
+    margin-top: 1rem;
+    display: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
 /*# sourceMappingURL=custom.min.css.map */
