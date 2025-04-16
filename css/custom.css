@@ -1,33 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'h1';
+    src: url('../fonts/Roabla-Regular.woff') format('woff'),
+         url('../fonts/Roabla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+  
+h1 {
+    font-family: 'h1';
+    font-size: clamp(80px, 10vw, 200px);
+    font-style: normal;
+    font-weight: 200;
+    line-height: 95.837%;
+    background: linear-gradient(90deg, #501613, rgba(80, 22, 19, 0.281));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'h2';
+    src: url('../fonts/Agatha.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
+h2 {
+    font-family: 'h1';
+    font-size: clamp(40px, 6vw, 80px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 95.837%;
+    background: linear-gradient(90deg, #50070f44, #3a0c0c9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+.h2-15 {
+    font-family: 'h1';
+    font-size: clamp(50px, 8vw, 100px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 95.837%;
+    background: linear-gradient(90deg, #500710, #3a0c0c9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: clamp(-150px, -20vw, -400px);
+}
+
+.h2-small {
+    font-family: 'h1';
+    font-size: clamp(30px, 4vw, 60px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 95.837%;
+    background: linear-gradient(90deg, #3a0c0c9a, #3a0c0c23);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+  
+h4 {
+    color: #a014247c;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    color: #a014247c;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+span, div, a, button, input {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+  
 #hero {
-    background-image: url("../images/bg-hero.jpg")
+    background-color: #ffffff;
+    padding-top: 5% !important;
+    padding-bottom: 0%!important;
+    display: flex;
+    flex-direction: column; /* Change to column for vertical alignment */
+    justify-content: center;
+    align-items: center;
+    height: 100%
 }
 
-#the-wedding-event {
-    background-image: url("../images/bg-the-wedding-event.jpg")
+.hero-main {
+    background-color: #ffffff;
+    padding-bottom: 3%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
 }
 
-#proposed {
-    background-image: url("../images/bg-proposed.jpg")
+/* Media query for tablet and mobile */
+@media (max-width: 1024px) {
+    .hero-main {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 3%!important;
+    }
 }
 
-#wedding-gifts {
-    background-image: url("../images/bg-wedding-gifts.jpg")
+.h1-hero {
+    font-family: 'h1';
+    font-size: 140px;
+    font-style: normal;
+    background: linear-gradient(90deg, #501613, rgba(80, 22, 19, 0.281)); /* example gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
-footer {
-    background-image: url("../images/bg-footer.jpg")
-}
-#hero {
-    margin-top: 0 !important;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-  }
-.body{
-    font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 576px) {
+    .h1-hero {
+        font-size: clamp(40px, 10vw, 80px);
+    }
 }
 
+.card {
+    position: relative;
+    width:fit-content; /* Changed from 300px to 100% */
+    height: 100%; /* Changed from max-content to 100% */
+    color: #333232;
+    border: 1px solid #2d3748;
+    border-radius: 400px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-  /* Lock Screen Styles */
+@media (max-width: 1024px) {
+    .card {
+        width: clamp(180px, 60vw, 250px);
+        max-height: 500PX;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%;
+        max-width: 220px;
+        max-height: 220px;
+        border-radius: 40px;
+    }
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    background-color: #3f272718;
+    border: 1px solid #7b808a6e;
+}
+
+.card2 {
+    position: relative;
+    height: 100%; /* Set to 100% of parent width */
+    aspect-ratio: 1/1; /* This creates a perfect square */
+    border-radius: 25%; /* 50% border-radius creates a circle */
+    transition: 0.5s;
+    cursor: pointer;
+    /* Combined background with gradient on top of image */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.74)), /* Dark overlay */
+        url("../images/Couple-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 2%;
+    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+@media (max-width: 1024px) {
+    .card2 {
+        width: clamp(180px, 60vw, 250px);
+        border-radius: 40PX;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%;
+        max-width: 220px;
+        max-height: 220px;
+        border-radius: 40px;
+    }
+}
+
+.card2:hover {
+    transform: translateY(-20px);
+    background-color: #3f272718;
+    border: 1px solid #7b808a6e;
+}
+
+.h2-white1 {
+    font-family: 'h1';
+    font-size: clamp(35px, 5vw, 70px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 95.837%;
+    background: linear-gradient(90deg, #ffffff, #ffffff9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.h2-white2 {
+    margin-top: clamp(-15px, -2vw, -25px);
+    font-family: 'h1';
+    font-size: clamp(40px, 6vw, 83px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 95.837%;
+    background: linear-gradient(90deg, #ffffff9c, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.hero-pan {
+    padding-top: clamp(20px, 4vh, 6%);
+    padding-bottom: clamp(20px, 4vh, 6%);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.h4-pan {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: clamp(12Px, 1.5vw, 10px);
+    letter-spacing: 0.25rem;
+    color: #2d3748;
+}
+
+.pan-button {
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: clamp(30px, 5vw, 44px);
+    height: auto;
+}
+
+.pan-button svg {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .pan-button {
+        width: 32px;
+    }
+    
+    .h4-pan {
+        letter-spacing: 0.15rem;
+    }
+}
+
+.pan-button:hover {
+    transform: translateY(-10px);
+}
+
+.hero-pan .h4-pan {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-pan .pan-button {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-pan:hover .h4-pan {
+    transform: translateY(-10px);
+}
+
+.hero-pan:hover .pan-button {
+    transform: translateY(-20px);
+}
+
+/* Fix container sizing on smaller screens */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Animation tweaks for mobile */
+@media (max-width: 768px) {
+    .card:hover, .card2:hover {
+        transform: translateY(-10px); /* Smaller hover effect on mobile */
+    }
+    
+    .hero-pan:hover .h4-pan {
+        transform: translateY(-5px);
+    }
+    
+    .hero-pan:hover .pan-button {
+        transform: translateY(-15px);
+    }
+}
+
+/* Prevent text overflow on smaller screens */
+@media (max-width: 576px) {
+    .h1-hero br {
+        display: none; /* Remove line breaks in heading on mobile */
+    }
+}
+
 
 #lock-screen {
     position: fixed;
@@ -82,8 +406,8 @@ h4 {
 
 #access-code:focus {
     outline: none;
-    border-color: #4299e1;
-    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    border-color: #472711;
+    box-shadow: 0 0 0 3px rgba(77, 47, 2, 0.15);
 }
 
 #access-code::placeholder {
@@ -94,7 +418,7 @@ h4 {
 button {
     padding: 0.75rem 1.75rem;
     border: none;
-    background: #4299e1;
+    background: #ca7d4a;
     color: white;
     font-weight: 500;
     border-radius: 8px;
@@ -105,7 +429,7 @@ button {
 }
 
 button:hover {
-    background: #3182ce;
+    background: #8f5732;
     transform: translateY(-1px);
 }
 
@@ -117,3 +441,7 @@ button:hover {
     font-weight: 400;
 }
 /*# sourceMappingURL=custom.min.css.map */
+
+
+  /* From Uiverse.io by htwarriors108 */ 
+/* Fixed card styling */
